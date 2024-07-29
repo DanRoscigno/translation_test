@@ -42,6 +42,6 @@ jobs:
             --input_folder docs/en \
             --out_folder docs/zh \
             --language zh \
-            --config_folder docs/docusaurus/translation/configs \
+            --config_path docs/docusaurus/translation/configs/config.yaml \
             --replace
         shell: bash
