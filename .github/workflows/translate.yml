@@ -37,11 +37,11 @@ jobs:
       - name: translating files
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        shell: bash
+        workingdir: docs/docusaurus/translation
         run: |
           gpt_translate.files ${{ steps.changed-files.outputs.changed_files }} \
-            --input_folder docs/en \
             --out_folder docs/zh \
             --language zh \
             --config_path docs/docusaurus/translation/configs/config.yaml \
             --replace
-        shell: bash
