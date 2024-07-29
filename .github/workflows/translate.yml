@@ -1,5 +1,4 @@
 name: 'Translate'
-description: 'Automatic translation using GPT'
 
 on:
   pull_request_target:
@@ -14,24 +13,6 @@ permissions:
   contents: read
   issues: write
 
-inputs:
-  folder-to-translate:  # id of input
-    description: 'Path to folder to translate'
-    required: true
-    default: 'docs/en/'
-  language:  # id of input
-    description: 'Language to translate to'
-    required: true
-    default: 'zh'
-  output-folder:
-    description: "Output Folder"
-    default: 'docs/zh/'
-  max-chunk-tokens:
-    description: "Max size of chunk to translate at once"
-    default: "1000"
-  config-folder:
-    description: "Config Folder"
-    default: './docs/docusaurus/translate/configs'
 outputs:
   translated-files:
     description: 'Translated files'
@@ -62,10 +43,9 @@ jobs:
           ALGOLIA_TOKEN: ${{ secrets.ALGOLIA_ANALYTICS_KEY }}
         run: |
           gpt_translate.files ${{ steps.changed-files.outputs.changed_files }} \
-            --input_folder ${{ inputs.folder-to-translate }} \
-            --out_folder ${{ inputs.output-folder }} \
-            --language ${{ inputs.language }} \
-            --max_chunk_tokens ${{ inputs.max-chunk-tokens }} \
-            --config_folder ${{ inputs.config-folder }} \
+            --input_folder docs/en \
+            --out_folder docs/zh \
+            --language zh \
+            --config_folder docs/docusaurus/translate/configs \
             --replace
         shell: bash
