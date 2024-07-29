@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ## Goals
 
-The goals of this quickstart are:
+The goals of this Quick Start are:
 
 - Deploy the StarRocks Kubernetes Operator and a StarRocks cluster with Helm
 - Configure a password for the StarRocks database user `root`
