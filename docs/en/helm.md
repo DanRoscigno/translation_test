@@ -1,7 +1,7 @@
 ---
 displayed_sidebar: "English"
 description: Use Helm to deploy StarRocks
-toc_max_heading_level: 4
+toc_max_heading_level: 5
 ---
 
 import Tabs from '@theme/Tabs';
