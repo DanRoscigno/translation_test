@@ -10,6 +10,10 @@ on:
       - main
       - 'branch*'
 
+permissions:
+  contents: read
+  issues: write
+
 inputs:
   folder-to-translate:  # id of input
     description: 'Path to folder to translate'
@@ -32,14 +36,6 @@ outputs:
   translated-files:
     description: 'Translated files'
     value: ${{ steps.changed-files.outputs.changed_files }} 
-
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 18 * * SUN'  # once a week on Sunday
-permissions:
-  contents: read
-  issues: write
 
 jobs:
   grab_feedback_from_posthog:
