@@ -30,6 +30,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install gpt-translate
+          python -m pip install -r docs/docusaurus/translation/requirements.txt
         shell: bash
       - name: translating files
         env:
@@ -39,6 +40,6 @@ jobs:
             --input_folder docs/en \
             --out_folder docs/zh \
             --language zh \
-            --config_folder docs/docusaurus/translate/configs \
+            --config_folder docs/docusaurus/translation/configs \
             --replace
         shell: bash
