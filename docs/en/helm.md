@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 The goals of this Quick Start are:
 
 - Deploy the StarRocks Kubernetes Operator and a StarRocks cluster with Helm
-- Configure a password for the StarRocks database user `root`
+- Configure an initial password for the StarRocks database user `root`
 - Provide for high-availability with three FEs and three BEs
 - Store metadata in persistent storage
 - Store data in persistent storage
