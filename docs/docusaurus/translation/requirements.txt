@@ -1,0 +1,8 @@
+simple_parsing
+rich
+openai
+fastcore
+tiktoken
+wandb
+tqdm
+weave
