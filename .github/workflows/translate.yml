@@ -27,6 +27,7 @@ jobs:
         id: changed-files
         run: |
             echo "changed_files=$(git --no-pager diff --name-only FETCH_HEAD $(git merge-base FETCH_HEAD main) | grep '\.md$|\.mdx$' | xargs)" >> $GITHUB_OUTPUT
+            echo ${{ steps.changed-files.outputs.changed_files }} 
 
       - name: Install dependencies
         run: |
@@ -42,6 +43,7 @@ jobs:
         working-directory: docs/docusaurus/translation
         run: |
           mkdir -p docs/zh
+          echo ${{ steps.changed-files.outputs.changed_files }} 
           gpt_translate.files ${{ steps.changed-files.outputs.changed_files }} \
             --out_folder docs/zh \
             --language zh \
