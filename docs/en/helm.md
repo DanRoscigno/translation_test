@@ -11,13 +11,12 @@ import TabItem from '@theme/TabItem';
 
 ## Goals
 
-The goals of this Quick Start are:
+The many goals of this Quick Start are:
 
 - Deploy the StarRocks Kubernetes Operator and a StarRocks cluster with Helm
 - Configure a password for the StarRocks database user `root`
 - Provide for high-availability with three FEs and three BEs
 - Store metadata in persistent storage
-- Store data in persistent storage
 - Allow MySQL clients to connect from outside the Kubernetes cluster
 - Allow loading data from outside the Kubernetes cluster using Stream Load
 - Load some public datasets
