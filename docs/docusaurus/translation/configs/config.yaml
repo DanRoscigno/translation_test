@@ -1,6 +1,6 @@
 # Logs:
 debug: false  # Debug mode
-weave_project: "gpt-translate"  # Weave project
+#weave_project: "gpt-translate"  # Weave project
 silence_openai: true  # Silence OpenAI logger
 
 # Translation:
@@ -8,7 +8,7 @@ language: "zh"  # Language to translate to
 config_folder: "./configs"  # Config folder
 replace: true  # Replace existing file
 remove_comments: true  # Remove comments
-do_evaluation: true  # Do evaluation
+#do_evaluation: true  # Do evaluation
 do_translate_header_description: true  # Translate the header description
 max_openai_concurrent_calls: 7  # Max number of concurrent calls to OpenAI
 
