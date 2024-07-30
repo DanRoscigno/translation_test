@@ -37,6 +37,7 @@ jobs:
       - name: translating files
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
         shell: bash
         working-directory: docs/docusaurus/translation
         run: |
