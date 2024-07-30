@@ -41,6 +41,7 @@ jobs:
         shell: bash
         working-directory: docs/docusaurus/translation
         run: |
+          mkdir -p docs/zh
           gpt_translate.files ${{ steps.changed-files.outputs.changed_files }} \
             --out_folder docs/zh \
             --language zh \
